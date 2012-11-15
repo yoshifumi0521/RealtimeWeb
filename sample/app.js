@@ -42,7 +42,6 @@ var io = require("socket.io").listen(server);
 io.sockets.on("connection",function(socket){
    //接続した
    console.log("サーバー接続");
-
    //クライアント側からmessageイベントが受信した時のイベント
    socket.on("message",function(data){
       var text = data.text;

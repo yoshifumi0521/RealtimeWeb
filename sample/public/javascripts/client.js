@@ -4,14 +4,6 @@ jQuery(function($) {
    var socket = io.connect();
    console.log("クライアントで接続"); 
 
-   //入力されたらする処理。
-   $("#input").keyup(function(){
-      var text = $(this).val();
-      //ここに入力する。
-      $("#comment").text(text);
-   });  
-
-   
    //sendボタンがクリックされたとき
    $("#send").click(function(){
       console.log("クリックされたー");
@@ -27,7 +19,12 @@ jQuery(function($) {
    
    });
    
-       
+   //サーバーからbraodcastがきたらする処理。
+   socket.on("message",function(data){
+      $('#list').prepend($('<div/>').text(data.text));
+      console.log("broadcastしたー"); 
+   
+   });
 
 
 
