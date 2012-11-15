@@ -42,7 +42,24 @@ var io = require("socket.io").listen(server);
 io.sockets.on("connection",function(socket){
    //接続した
    console.log("サーバー接続");
-    
+
+   //クライアント側からmessageイベントが受信した時のイベント
+   socket.on("message",function(data){
+      var text = data.text;
+      //念のためdataの値が正しいかチェック
+      if(data && typeof text=== "string"){
+         //メッセージを投げたクライアント以外のすべてのクライアントに投げる
+         socket.broadcast.json.emit('message',{text:text});
+         console.log("broadcastした");
+      }
+   });
+
+
+
+
+
+
+
 
 
 
