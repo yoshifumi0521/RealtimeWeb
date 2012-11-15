@@ -14,7 +14,6 @@ jQuery(function($) {
          socket.emit("message",{text:text});
          $('#list').prepend($('<div/>').text(text));
          $("#input").val("");
-         $("#comment").text("");
       }
    
    });
