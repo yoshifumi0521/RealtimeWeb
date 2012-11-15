@@ -1,4 +1,17 @@
 RealtimeWeb
 ===========
 
-Node.js、Socket.IO、MongoDBでリアルタイムWebをつくる。
+Node.js、ライブラリSocket.IO、ExpressでリアルタイムWebをつくる。
+
+・Socket.IO
+
+http://socket.io/
+
+・Express
+
+http://expressjs.com/
+
+
+
+
+
