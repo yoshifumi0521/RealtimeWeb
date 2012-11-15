@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>チャットサンプル</title>
+      <title>チャットサイト</title>
       <link rel='stylesheet' href='/stylesheets/style.css' />
       <script src="/socket.io/socket.io.js"></script>
        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -9,8 +9,13 @@
 
 </head>
    <body>
-      <h1>チャットサンプル</h1>
-         <div><input type="text" id="input" /><button id="send">send</button></div>
+      <h1>チャットサイト</h1>
+         <div><input type="text" id="input" />
+            <button id="send">send</button>
+            <!-- ここはjQueryで入力--> 
+            <span id="comment"></p>
+         </div>
+             
          <div id="list"></div>
   
   
