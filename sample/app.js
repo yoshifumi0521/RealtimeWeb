@@ -37,8 +37,16 @@ server.listen(app.get('port'), function(){
 });
 
 //socket.ioのインスタンス作成
+var io = require("socket.io").listen(server);
+//クライアントから接続あった時のイベント
+io.sockets.on("connection",function(socket){
+   //接続した
+   console.log("サーバー接続");
+    
 
 
+
+});
 
 
 

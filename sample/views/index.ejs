@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+   <head>
+      <title>チャットサンプル</title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <script src="/socket.io/socket.io.js"></script>
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <script src="/javascripts/client.js"></script>
+
+</head>
+   <body>
+      <h1>チャットサンプル</h1>
+         <div><input type="text" id="input" /><button id="send">send</button></div>
+         <div id="list"></div>
+  
+  
+  
+  
+   </body>
 </html>
